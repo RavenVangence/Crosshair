@@ -1,9 +1,10 @@
 using System.Text.Json;
+using Crosshair.Models;
 
 namespace Crosshair;
 
 /// <summary>
-/// Configuration settings for the crosshair overlay
+/// Legacy configuration settings for backwards compatibility
 /// </summary>
 public class CrosshairSettings
 {
@@ -23,9 +24,9 @@ public class CrosshairSettings
     {
         try
         {
-            if (File.Exists(filePath))
+            if (System.IO.File.Exists(filePath))
             {
-                string json = File.ReadAllText(filePath);
+                string json = System.IO.File.ReadAllText(filePath);
                 return JsonSerializer.Deserialize<CrosshairSettings>(json) ?? new CrosshairSettings();
             }
         }
@@ -49,38 +50,11 @@ public class CrosshairSettings
         {
             var options = new JsonSerializerOptions { WriteIndented = true };
             string json = JsonSerializer.Serialize(this, options);
-            File.WriteAllText(filePath, json);
+            System.IO.File.WriteAllText(filePath, json);
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Failed to save settings: {ex.Message}");
         }
-    }
-}
-
-public enum CrosshairStyle
-{
-    Cross,
-    Dot,
-    Circle,
-    TShape,
-    Square
-}
-
-public class ColorRGBA
-{
-    public byte R { get; set; }
-    public byte G { get; set; }
-    public byte B { get; set; }
-    public byte A { get; set; }
-
-    public ColorRGBA() { }
-
-    public ColorRGBA(byte r, byte g, byte b, byte a)
-    {
-        R = r;
-        G = g;
-        B = b;
-        A = a;
     }
 }

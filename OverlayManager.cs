@@ -2,6 +2,8 @@ using GameOverlay.Drawing;
 using GameOverlay.Windows;
 using Graphics = GameOverlay.Drawing.Graphics;
 using SolidBrush = GameOverlay.Drawing.SolidBrush;
+using Crosshair.Models;
+using CrosshairStyle = Crosshair.Models.CrosshairStyle;
 
 namespace Crosshair;
 

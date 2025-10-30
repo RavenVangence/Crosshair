@@ -1,0 +1,273 @@
+{
+    "CurrentProfileName": "CS:GO",
+    "Profiles": [
+        {
+            "Name": "CS:GO",
+            "ActiveCrosshairIndex": 0,
+            "Crosshairs": [
+                {
+                    "Name": "Rifle - Green Cross",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Cross",
+                        "Size": 12,
+                        "Thickness": 2,
+                        "Gap": 3,
+                        "Color": {
+                            "R": 0,
+                            "G": 255,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 200
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": false,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                },
+                {
+                    "Name": "AWP - Cyan Dot",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Dot",
+                        "Size": 3,
+                        "Thickness": 2,
+                        "Gap": 0,
+                        "Color": {
+                            "R": 0,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": false,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "Name": "Valorant",
+            "ActiveCrosshairIndex": 0,
+            "Crosshairs": [
+                {
+                    "Name": "Default - White Cross",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Cross",
+                        "Size": 10,
+                        "Thickness": 2,
+                        "Gap": 2,
+                        "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 255,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 200
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": false,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "Name": "Apex Legends",
+            "ActiveCrosshairIndex": 0,
+            "Crosshairs": [
+                {
+                    "Name": "Classic - Red Cross",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Cross",
+                        "Size": 15,
+                        "Thickness": 2,
+                        "Gap": 4,
+                        "Color": {
+                            "R": 255,
+                            "G": 0,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 200
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": false,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                },
+                {
+                    "Name": "Sniper - Dot",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Dot",
+                        "Size": 3,
+                        "Thickness": 2,
+                        "Gap": 0,
+                        "Color": {
+                            "R": 255,
+                            "G": 0,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": false,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                }
+            ]
+        },
+        {
+            "Name": "Custom Example",
+            "ActiveCrosshairIndex": 0,
+            "Crosshairs": [
+                {
+                    "Name": "Offset Crosshair (Lean Right)",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Cross",
+                        "Size": 15,
+                        "Thickness": 2,
+                        "Gap": 3,
+                        "Color": {
+                            "R": 255,
+                            "G": 255,
+                            "B": 0,
+                            "A": 255
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 200
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": true,
+                        "CenterDotSize": 2
+                    },
+                    "Transform": {
+                        "OffsetX": 50.0,
+                        "OffsetY": 0.0,
+                        "Scale": 0.8,
+                        "Rotation": 0.0
+                    }
+                },
+                {
+                    "Name": "Large Circle",
+                    "Type": "Vector",
+                    "Vector": {
+                        "Style": "Circle",
+                        "Size": 25,
+                        "Thickness": 2,
+                        "Gap": 4,
+                        "Color": {
+                            "R": 0,
+                            "G": 255,
+                            "B": 255,
+                            "A": 200
+                        },
+                        "OutlineColor": {
+                            "R": 0,
+                            "G": 0,
+                            "B": 0,
+                            "A": 200
+                        },
+                        "ShowOutline": true,
+                        "OutlineThickness": 1,
+                        "ShowCenterDot": true,
+                        "CenterDotSize": 3
+                    },
+                    "Transform": {
+                        "OffsetX": 0.0,
+                        "OffsetY": 0.0,
+                        "Scale": 1.0,
+                        "Rotation": 0.0
+                    }
+                }
+            ]
+        }
+    ],
+    "Rendering": {
+        "Method": "Overlay",
+        "TargetFPS": 60,
+        "VSync": true,
+        "AntiAliasing": true
+    },
+    "Monitor": {
+        "SelectionMode": "Primary",
+        "MonitorIndex": 0,
+        "MonitorDeviceName": null
+    },
+    "Hotkeys": {
+        "ToggleVisibility": "Insert",
+        "Exit": "Ctrl+Q",
+        "NextProfile": "Ctrl+Right",
+        "PreviousProfile": "Ctrl+Left",
+        "NextCrosshair": "Ctrl+Up",
+        "PreviousCrosshair": "Ctrl+Down",
+        "OpenUI": "Ctrl+Shift+C"
+    }
+}

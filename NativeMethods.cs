@@ -25,6 +25,10 @@ public static class NativeMethods
     // Virtual key codes
     public const int VK_INSERT = 0x2D;
     public const int VK_Q = 0x51;
+    public const int VK_LEFT = 0x25;
+    public const int VK_UP = 0x26;
+    public const int VK_RIGHT = 0x27;
+    public const int VK_DOWN = 0x28;
 
     // Window messages
     public const int WM_HOTKEY = 0x0312;

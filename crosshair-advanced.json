@@ -1,0 +1,126 @@
+{
+  "CurrentProfileName": "Default",
+  "Profiles": [
+    {
+      "Name": "Default",
+      "Crosshairs": [
+        {
+          "Name": "Default Cross",
+          "Type": 0,
+          "Vector": {
+            "Style": 4,
+            "Size": 20,
+            "Thickness": 2,
+            "Gap": 4,
+            "Color": {
+              "R": 255,
+              "G": 0,
+              "B": 0,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": true,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 1,
+            "Rotation": 0
+          }
+        },
+        {
+          "Name": "CS:GO T-Style",
+          "Type": 0,
+          "Vector": {
+            "Style": 3,
+            "Size": 10,
+            "Thickness": 2,
+            "Gap": 2,
+            "Color": {
+              "R": 0,
+              "G": 255,
+              "B": 255,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": false,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 1,
+            "Rotation": 0
+          }
+        },
+        {
+          "Name": "X Style",
+          "Type": 0,
+          "Vector": {
+            "Style": 6,
+            "Size": 20,
+            "Thickness": 2,
+            "Gap": 4,
+            "Color": {
+              "R": 255,
+              "G": 0,
+              "B": 255,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": false,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 1,
+            "Rotation": 0
+          }
+        }
+      ],
+      "ActiveCrosshairIndex": 0
+    }
+  ],
+  "Rendering": {
+    "Method": 0,
+    "TargetFPS": 60,
+    "VSync": true,
+    "AntiAliasing": true
+  },
+  "Hotkeys": {
+    "ToggleVisibility": "Insert",
+    "Exit": "Ctrl\u002BQ",
+    "NextProfile": "Ctrl\u002BRight",
+    "PreviousProfile": "Ctrl\u002BLeft",
+    "NextCrosshair": "Ctrl\u002BUp",
+    "PreviousCrosshair": "Ctrl\u002BDown",
+    "OpenUI": "Ctrl\u002BShift\u002BC"
+  },
+  "Monitor": {
+    "SelectionMode": 2,
+    "MonitorIndex": 0
+  }
+}

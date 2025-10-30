@@ -8,14 +8,110 @@
           "Name": "Default Cross",
           "Type": 0,
           "Vector": {
-            "Style": 4,
-            "Size": 20,
+            "Style": 0,
+            "Size": 80,
+            "Thickness": 2,
+            "Gap": 4,
+            "Color": {
+              "R": 0,
+              "G": 255,
+              "B": 64,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": false,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 1,
+            "Rotation": 0
+          }
+        },
+        {
+          "Name": "CS:GO T-Style",
+          "Type": 0,
+          "Vector": {
+            "Style": 3,
+            "Size": 90,
+            "Thickness": 2,
+            "Gap": 40,
+            "Color": {
+              "R": 0,
+              "G": 255,
+              "B": 255,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
+              "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": true,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 0.9,
+            "Rotation": 0
+          }
+        },
+        {
+          "Name": "X Style",
+          "Type": 0,
+          "Vector": {
+            "Style": 6,
+            "Size": 80,
             "Thickness": 2,
             "Gap": 4,
             "Color": {
               "R": 255,
               "G": 0,
+              "B": 255,
+              "A": 255
+            },
+            "OutlineColor": {
+              "R": 0,
+              "G": 0,
               "B": 0,
+              "A": 200
+            },
+            "ShowOutline": true,
+            "OutlineThickness": 1,
+            "ShowCenterDot": false,
+            "CenterDotSize": 2
+          },
+          "Transform": {
+            "OffsetX": 0,
+            "OffsetY": 0,
+            "Scale": 1,
+            "Rotation": 0
+          }
+        },
+        {
+          "Name": "Apex Fave",
+          "Type": 0,
+          "Vector": {
+            "Style": 0,
+            "Size": 90,
+            "Thickness": 2,
+            "Gap": 30,
+            "Color": {
+              "R": 0,
+              "G": 255,
+              "B": 64,
               "A": 255
             },
             "OutlineColor": {
@@ -35,73 +131,9 @@
             "Scale": 1,
             "Rotation": 0
           }
-        },
-        {
-          "Name": "CS:GO T-Style",
-          "Type": 0,
-          "Vector": {
-            "Style": 3,
-            "Size": 10,
-            "Thickness": 2,
-            "Gap": 2,
-            "Color": {
-              "R": 0,
-              "G": 255,
-              "B": 255,
-              "A": 255
-            },
-            "OutlineColor": {
-              "R": 0,
-              "G": 0,
-              "B": 0,
-              "A": 200
-            },
-            "ShowOutline": true,
-            "OutlineThickness": 1,
-            "ShowCenterDot": false,
-            "CenterDotSize": 2
-          },
-          "Transform": {
-            "OffsetX": 0,
-            "OffsetY": 0,
-            "Scale": 1,
-            "Rotation": 0
-          }
-        },
-        {
-          "Name": "X Style",
-          "Type": 0,
-          "Vector": {
-            "Style": 6,
-            "Size": 20,
-            "Thickness": 2,
-            "Gap": 4,
-            "Color": {
-              "R": 255,
-              "G": 0,
-              "B": 255,
-              "A": 255
-            },
-            "OutlineColor": {
-              "R": 0,
-              "G": 0,
-              "B": 0,
-              "A": 200
-            },
-            "ShowOutline": true,
-            "OutlineThickness": 1,
-            "ShowCenterDot": false,
-            "CenterDotSize": 2
-          },
-          "Transform": {
-            "OffsetX": 0,
-            "OffsetY": 0,
-            "Scale": 1,
-            "Rotation": 0
-          }
         }
       ],
-      "ActiveCrosshairIndex": 0
+      "ActiveCrosshairIndex": 3
     }
   ],
   "Rendering": {

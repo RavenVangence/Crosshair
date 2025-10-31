@@ -1,3 +1,4 @@
+using System.IO;
 using System.Text.Json;
 using System.Text.Json.Serialization;
 
@@ -48,9 +49,13 @@ public class AdvancedSettings
     {
         try
         {
-            if (System.IO.File.Exists(filePath))
+            // Use executable directory for settings file
+            var exeDir = AppDomain.CurrentDomain.BaseDirectory;
+            var fullPath = Path.Combine(exeDir, filePath);
+
+            if (System.IO.File.Exists(fullPath))
             {
-                string json = System.IO.File.ReadAllText(filePath);
+                string json = System.IO.File.ReadAllText(fullPath);
                 var settings = JsonSerializer.Deserialize<AdvancedSettings>(json);
                 if (settings != null && settings.Profiles.Count > 0)
                     return settings;
@@ -70,13 +75,17 @@ public class AdvancedSettings
     {
         try
         {
+            // Use executable directory for settings file
+            var exeDir = AppDomain.CurrentDomain.BaseDirectory;
+            var fullPath = Path.Combine(exeDir, filePath);
+
             var options = new JsonSerializerOptions
             {
                 WriteIndented = true,
                 DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
             };
             string json = JsonSerializer.Serialize(this, options);
-            System.IO.File.WriteAllText(filePath, json);
+            System.IO.File.WriteAllText(fullPath, json);
         }
         catch (Exception ex)
         {

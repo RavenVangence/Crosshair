@@ -107,7 +107,7 @@
             "Style": 0,
             "Size": 90,
             "Thickness": 2,
-            "Gap": 30,
+            "Gap": 4,
             "Color": {
               "R": 0,
               "G": 255,
@@ -122,7 +122,7 @@
             },
             "ShowOutline": true,
             "OutlineThickness": 1,
-            "ShowCenterDot": true,
+            "ShowCenterDot": false,
             "CenterDotSize": 2
           },
           "Transform": {

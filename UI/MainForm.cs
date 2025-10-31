@@ -12,6 +12,7 @@ public class MainForm : Form
     private readonly AdvancedSettings _settings;
     private readonly AdvancedOverlayManager _overlayManager;
     private Thread? _overlayThread;
+    private bool _isLoading = false; // Flag to prevent event handlers during load
 
     // UI Controls
     private Button _toggleOverlayButton = null!;
@@ -52,6 +53,9 @@ public class MainForm : Form
         this.FormBorderStyle = FormBorderStyle.Sizable;
         this.BackColor = Color.FromArgb(45, 45, 48);
         this.ForeColor = Color.White;
+        
+        // Handle form closing to properly cleanup overlay
+        this.FormClosing += MainForm_FormClosing;
 
         // Main layout
         var mainLayout = new TableLayoutPanel
@@ -641,6 +645,9 @@ public class MainForm : Form
 
     private void ApplyChangesImmediately()
     {
+        // Don't apply changes if we're currently loading settings
+        if (_isLoading) return;
+
         try
         {
             var profile = _settings.GetCurrentProfile();
@@ -690,8 +697,8 @@ public class MainForm : Form
 
     private void LoadSettings()
     {
-        // Temporarily disable event handlers
-        _profileComboBox.SelectedIndexChanged -= ProfileComboBox_SelectedIndexChanged;
+        // Set flag to prevent event handlers during load
+        _isLoading = true;
 
         try
         {
@@ -724,8 +731,8 @@ public class MainForm : Form
         }
         finally
         {
-            // Re-enable event handler
-            _profileComboBox.SelectedIndexChanged += ProfileComboBox_SelectedIndexChanged;
+            // Re-enable event handlers
+            _isLoading = false;
         }
     }
 
@@ -734,8 +741,8 @@ public class MainForm : Form
         var profile = _settings.GetCurrentProfile();
         if (profile == null) return;
 
-        // Temporarily disable event handlers to prevent infinite loop
-        _crosshairComboBox.SelectedIndexChanged -= CrosshairComboBox_SelectedIndexChanged;
+        // Set flag to prevent event handlers from saving during load
+        _isLoading = true;
 
         try
         {
@@ -768,8 +775,8 @@ public class MainForm : Form
         }
         finally
         {
-            // Re-enable event handler
-            _crosshairComboBox.SelectedIndexChanged += CrosshairComboBox_SelectedIndexChanged;
+            // Re-enable event handlers
+            _isLoading = false;
         }
     }
 

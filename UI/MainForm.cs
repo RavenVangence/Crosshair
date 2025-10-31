@@ -12,7 +12,6 @@ public class MainForm : Form
     private readonly AdvancedSettings _settings;
     private readonly AdvancedOverlayManager _overlayManager;
     private Thread? _overlayThread;
-    private bool _isLoading = false; // Flag to prevent event handlers during load
 
     // UI Controls
     private Button _toggleOverlayButton = null!;
@@ -53,9 +52,6 @@ public class MainForm : Form
         this.FormBorderStyle = FormBorderStyle.Sizable;
         this.BackColor = Color.FromArgb(45, 45, 48);
         this.ForeColor = Color.White;
-        
-        // Handle form closing to properly cleanup overlay
-        this.FormClosing += MainForm_FormClosing;
 
         // Main layout
         var mainLayout = new TableLayoutPanel
@@ -645,9 +641,6 @@ public class MainForm : Form
 
     private void ApplyChangesImmediately()
     {
-        // Don't apply changes if we're currently loading settings
-        if (_isLoading) return;
-
         try
         {
             var profile = _settings.GetCurrentProfile();
@@ -697,8 +690,8 @@ public class MainForm : Form
 
     private void LoadSettings()
     {
-        // Set flag to prevent event handlers during load
-        _isLoading = true;
+        // Temporarily disable event handlers
+        _profileComboBox.SelectedIndexChanged -= ProfileComboBox_SelectedIndexChanged;
 
         try
         {
@@ -731,8 +724,8 @@ public class MainForm : Form
         }
         finally
         {
-            // Re-enable event handlers
-            _isLoading = false;
+            // Re-enable event handler
+            _profileComboBox.SelectedIndexChanged += ProfileComboBox_SelectedIndexChanged;
         }
     }
 
@@ -741,8 +734,17 @@ public class MainForm : Form
         var profile = _settings.GetCurrentProfile();
         if (profile == null) return;
 
-        // Set flag to prevent event handlers from saving during load
-        _isLoading = true;
+        // Temporarily disable ALL event handlers to prevent triggering saves during load
+        _crosshairComboBox.SelectedIndexChanged -= CrosshairComboBox_SelectedIndexChanged;
+        _styleComboBox.SelectedIndexChanged -= (s, e) => ApplyChangesImmediately();
+        _sizeNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
+        _thicknessNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
+        _gapNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
+        _showOutlineCheckBox.CheckedChanged -= (s, e) => ApplyChangesImmediately();
+        _showCenterDotCheckBox.CheckedChanged -= (s, e) => ApplyChangesImmediately();
+        _offsetXNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
+        _offsetYNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
+        _scaleNumeric.ValueChanged -= (s, e) => ApplyChangesImmediately();
 
         try
         {
@@ -775,8 +777,17 @@ public class MainForm : Form
         }
         finally
         {
-            // Re-enable event handlers
-            _isLoading = false;
+            // Re-enable ALL event handlers
+            _crosshairComboBox.SelectedIndexChanged += CrosshairComboBox_SelectedIndexChanged;
+            _styleComboBox.SelectedIndexChanged += (s, e) => ApplyChangesImmediately();
+            _sizeNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
+            _thicknessNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
+            _gapNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
+            _showOutlineCheckBox.CheckedChanged += (s, e) => ApplyChangesImmediately();
+            _showCenterDotCheckBox.CheckedChanged += (s, e) => ApplyChangesImmediately();
+            _offsetXNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
+            _offsetYNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
+            _scaleNumeric.ValueChanged += (s, e) => ApplyChangesImmediately();
         }
     }
 
